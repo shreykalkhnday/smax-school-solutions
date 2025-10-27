@@ -1,0 +1,1 @@
+# smax-school-solutions-web
