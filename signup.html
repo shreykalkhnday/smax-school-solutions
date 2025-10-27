@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMax School Solutions</title>
+  <link rel="stylesheet" href="css/style.css"> 
+  <style>
+    #tag{
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="greeting">WELCOME</h1>
+  <div class="container">
+    <h3 class="signup-head">Signup</h3>
+    <form>
+      <input type="text" name="name" id="name" placeholder="Your Name" autocomplete="off">
+      <input type="text" placeholder="School's Name" autocomplete="off">
+      <input type="email" placeholder="Email" autocomplete="off">
+      <input type="password" name="password" id="password" placeholder="Password">
+      <button type="sumbit">Signup</button>
+    </form>
+  </div>
+  <p id="tag">Already have an account? <a href="index.html">Login</a></p>
+  <footer>
+    <p>&copy; SMax School Solutions | All rights reserved |</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script>
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAk-DPlnxxGp1KM4qp1QuFDbjFmvT0DKBM",
+    authDomain: "smaxschoolsolutions.firebaseapp.com",
+    projectId: "smaxschoolsolutions",
+    storageBucket: "smaxschoolsolutions.firebasestorage.app",
+    messagingSenderId: "567217534061",
+    appId: "1:567217534061:web:bd670e6c6f4501df997b64",
+    measurementId: "G-6BK7KYKZE4"
+  };
+
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+
+// Signup
+const signupForm = document.getElementById('signupForm');
+if(signupForm){
+  signupForm.addEventListener('submit', e=>{
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    auth.createUserWithEmailAndPassword(email, password)
+      .then(userCredential => {
+        alert('Signup successful!');
+        signupForm.reset();
+        window.location.href = 'index.html';
+      })
+      .catch(err => alert('Error: ' + err.message));
+  });
+}
+  </script>
+</body>
+</html>

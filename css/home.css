@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container{
+  margin: 10px;
+}
+
+.navbar{
+  display: flex;
+}
+
+.nav-opt{
+  display: flex;
+  list-style: none;
+}
+
+.nav-opt li{
+  text-align: center;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 1200px;
+}
+
+.nav-opt li a{
+  text-decoration: none;
+  color: black
+}
+
+.hero-section .card{
+  background-color: red;
+  display: flex;
+  flex-direction: row;   /* default hota hai row, par likh dena safe hai */
+  justify-content: start; /* ya center/right as tu chahe */
+  align-items: center;
+  height: 150px;
+  width: 300px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  transition: 0.6s;
+}
+
+.hero-section .card h3{
+  justify-content: center;
+  margin-left: 30px;
+}
+
+.card:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.6s;
+}
