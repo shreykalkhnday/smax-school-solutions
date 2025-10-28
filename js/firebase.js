@@ -6,7 +6,7 @@
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
-    apiKey: "AIzaSyAk-DPlnxxGp1KM4qp1QuFDbjFmvT0DKBM",
+    apiKey: "${{ secrets.GOOGLE_API_KEY }}",
     authDomain: "smaxschoolsolutions.firebaseapp.com",
     projectId: "smaxschoolsolutions",
     storageBucket: "smaxschoolsolutions.firebasestorage.app",
@@ -53,4 +53,5 @@ if(loginForm){
       })
       .catch(err => alert('Login failed: ' + err.message));
   });
+
 }
