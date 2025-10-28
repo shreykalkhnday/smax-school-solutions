@@ -1,20 +1,15 @@
-/* Full page setup */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
 }
 
-
-body {               /* Full viewport height */
-  margin: auto;
-  display: flex;                   /* Flexbox for centering */
-  justify-content: center;         /* Center horizontally */
-  align-items: center;             /* Center vertically */
-  background-color: #f2f2f2;       /* Light grey background */
-  font-family: 'Georgia', serif;
+body{
+  font-family: "Ouicksand", sans-serif;
 }
 
-/* Paper container */
+/* Paper */
 .paper {
   width: 1240px;
   height: 1754px;
@@ -25,54 +20,97 @@ body {               /* Full viewport height */
   box-sizing: border-box;
 }
 
+/* School Name input */
 #school-name{
-  padding: 20px 20px;
-  width: 650px;
+  padding: 20px;
   font-size: 50px;
-  border: none;
+  margin-left: 0px;
+  width: 1100px;
   outline: none;
+  border: none;
+  text-transform: uppercase;
   text-align: center;
-  margin-left: 200px;
+  align-items: center;
+  justify-content: center;
+  /* background-color: black; */
+  padding-bottom: -100px;
 }
 
-#examination-year, .e-y{
+/* Examination Options */
+#examination-opts{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-right: 200px;
+  /* background-color: red; */
+}
+
+/* Yearly/Monthly Input */
+#ym-in{
+  margin-left: -190px;
   outline: none;
-  margin-left: 200px;
-}
-.s-label h1 {
-  font-size: 22px;
-  margin: 0;
+  border: none;
+  padding: 20px;
 }
 
-#subject {
-  font-size: 22px;
-  border: none;
- /* optional underline look */
+/* #examination-input{
+  padding: 20px;
+  font-size: 20px;
   outline: none;
-  margin: -20px 0;
+  border: none;
+} */
+
+/* Examination Options and Examination Input */
+select, #examination-input{
+  padding: 0px;
+  font-size: 50px;
+  margin-top: -200px;
+  margin-left: 300px;
+  width: 550px;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
 }
 
-input{
+/* Subject */
+#subject{
+  padding: 20px;
+  font-size: 20px;
+  outline: none;
   border: none;
 }
 
-#subject h3{
-  margin-left: -1050px;
+/* Maximum Marks */
+#max-marks{
+  outline: none;
+  border: none;
 }
 
-@page {
-  size: A4;        /* Auto sets 210mm × 297mm */
-  margin: 0;
+/* Class */
+#class{
+  padding: 20px;
+  font-size: 20px;
+  outline: none;
+  border: none;
 }
 
-@media print {
-  body {
-    margin: 0;
-  }
+/* Time */
+#time{
+  padding: 5px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+}
 
-  .paper {
-    width: 210mm;   /* or use mm instead of px */
-    height: 297mm;
-    box-shadow: none;
-  }
+/* Question's Answer Options */
+.options{
+  border: none;
+  padding: 10px;
+  font-size: 25px;
+  display: flex;
+  outline: none;
 }

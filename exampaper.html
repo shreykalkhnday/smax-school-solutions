@@ -3,68 +3,105 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Paper · SMax School Solutions</title>
+    <title>ExamPaper Creator | SMaxSchoolSolutions</title>
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/exampaper.css">
   </head>
   <body>
     <!-- Paper -->
     <div class="paper">
-      <!-- Main Content -->
-      <!-- School Name -->
-      <input type="text" name="schoolname" id="school-name"
-        placeholder="School Name" maxlength="30"
-        style="text-transform: uppercase; ">
+    <!-- Top -->
 
-      <!-- Examination Year -->
-      <label for="examination-year"
-        style="display:inline-block; width:100%; text-align:center; margin:0; padding:0;">
-          <select id="subject" name="subject"
-            style="font-size:22px; border:none; outline:none; text-align:center;">
-            <option value>Select Monthly/Half Yearly Examination</option>
-            <option value="monthly examination">Monthly Examination</option>
-            <option value="yearly examination">Yearly Examination</option>
-          </select>
-          
-        <input type="number" id="examination-year" placeholder="2025-26"
-          min="1900" max="2099" title="Provide a Year Example: 2025-26"
-          style="font-size:22px; width:120px; text-align:center; border:none; outline:none; margin-left:0; padding-left:0;">
-      </label>
+     <!-- School Name -->
+      <input type="text" placeholder="School Name" id="school-name" required>
 
-      <!--Spacing -->
+      <!-- Examination Year/Month -->
+      <select id="examination-opts" name="subject"
+        style="font-size:22px; border:none; outline:none; text-align:center; align-items: center; justify-content: center;">
+        <option value>Select Monthly/Half Yearly Examination</option>
+        <option value="half yearly examination">Half Yearly Examination</option>
+        <option value="monthly examination">Monthly Examination</option>
+        <option value="yearly examination">Yearly Examination</option>
+      </select><input type="number" id="ym-in" placeholder="..............................">
+    
 
-      <!-- Subject -->
-      <label id="subject" for="subject"
-        style="display:inline-block; text-align:center; width:100%;">
-        <h1 style="display:inline; font-size:22px; margin:0;">‎ SUBJECT -</h1>
-        <input type="text" id="subject" placeholder="Subject"
-          style="font-size:22px; text-align:center; border:none; outline:none; margin-left:0; padding-left:0; gap: 10px; margin-top: 0;">
-      </label>
+      <!-- Subject, Name and Maximum Marks -->
+      <h2>Name..................‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Subject - <input type="text" placeholder="Subject" id="subject">Max. Marks - <input type="number" id="max-marks" placeholder="......................."></h2>
 
-      <!-- Name -->
-      <label id="name" for="name"
-        style="display:inline-block; text-align:left; width:100%;">
-        <h1 style="display:inline; font-size:22px; margin-bottom: 0px;">NAME
-          -</h1>
-      </label>
+      <!-- Roll no, Class and Time -->
+       <h2>Role no................‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Class - <input type="text" placeholder="Class" id="class">Time................
+    
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       <br>
 
-      <!-- Roll No -->
-      <label for="roll-no"
-        style="display:inline-block; text-align:left; width:100%;">
-        <h1 style="display:inline; font-size:22px; margin:0;">Roll No -</h1>
-      </label>
+    <!-- Middle -->
+     <!-- Questions Inputs -->
 
-     <!-- Spacing -->
+     <!-- Question 1 -->
+      <h2 id="question">Q.1 Write in words.</h2>
+      <input type="text" class="options" placeholder="i.">
+      <input type="text" class="options" placeholder="ii.">
+      <input type="text" class="options" placeholder="iii.">
+      <input type="text" class="options" placeholder="iv.">
 
-      <!-- Class -->
-      <label for="class"
-        style="display:inline-block; text-align:center; width:100%;">
-        <p style="display:inline; font-size:22px; margin:0;">CLASS -</p>
-        <input type="text" id="class" placeholder="Class"
-          style="font-size:22px; text-align:center; border:none; outline:none; margin-left:0; padding-left:0; margin-top: -50px;">
-      </label>
+      <!-- Question 2 -->
+      <h2 id="question">Q.2 Write in expanded form.</h2>
+      <input type="text" class="options" placeholder="i.">
+      <input type="text" class="options" placeholder="ii.">
+      <input type="text" class="options" placeholder="iii.">
+      <input type="text" class="options" placeholder="iv.">
+      
+      <!-- Question 3 -->
+      <h2 id="question">Q.3 Write in short form.</h2>
+      <input type="text" class="options" placeholder="i.">
+      <input type="text" class="options" placeholder="ii.">
+      <input type="text" class="options" placeholder="iii.">
+      <input type="text" class="options" placeholder="iv.">
+      
+      <!-- Question 4 -->
+      <h2 id="question">Q.4 Write in digits.</h2>
+      <input type="text" class="options" placeholder="i.">
+      <input type="text" class="options" placeholder="ii.">
+      <input type="text" class="options" placeholder="iii.">
+      <input type="text" class="options" placeholder="iv.">
+      
+      <!-- Question 5 -->
+      <h2 id="question">Q.5 Write in ascending order.</h2>
+      <input type="text" class="options" placeholder="i.">
+      <input type="text" class="options" placeholder="ii.">
+      <input type="text" class="options" placeholder="iii.">
+      <input type="text" class="options" placeholder="iv.">
+      
+      <!-- Question 6 -->
+      <h2 id="question">Q.6 Write in descending order.</h2>
+      <input type="text" class="options" placeholder="i.">
+      <input type="text" class="options" placeholder="ii.">
+      <input type="text" class="options" placeholder="iii.">
+      <input type="text" class="options" placeholder="iv.">
 
     </div>
+    
+    <!-- Paper 2 -->
+     <div class="paper">
+      <!-- Question 7 -->
+      <h2 id="question">Q.7 Write the place value.</h2>
+      <input type="text" class="options" placeholder="i.">
+      <input type="text" class="options" placeholder="ii.">
+      <input type="text" class="options" placeholder="iii.">
+      <input type="text" class="options" placeholder="iv.">
+
+      <!-- Question 8 -->
+      <h2 id="question">Q.8 Solve the following sums.</h2>
+      <input type="text" class="options" placeholder="i.">
+      <input type="text" class="options" placeholder="ii.">
+      <input type="text" class="options" placeholder="iii.">
+      <input type="text" class="options" placeholder="iv.">
+
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+     </div>
     <!-- Script -->
-    <script src="js/exampaper.js"></script>
+    <script src="exampaper.js"></script>
   </body>
 </html>
